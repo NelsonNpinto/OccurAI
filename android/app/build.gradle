@@ -78,7 +78,7 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.myhealthapp"
-    defaultConfig {
+    defaultConfig { 
         applicationId "com.myhealthapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -110,6 +110,8 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+    implementation 'com.google.android.gms:play-services-fitness:21.1.0'
+        implementation 'com.google.android.gms:play-services-auth:20.6.0'
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
